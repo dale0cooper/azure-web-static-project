@@ -6,8 +6,6 @@
 )
 $ErrorActionPreference = "Stop"
 
-if (-not (Get-Command az -ErrorAction SilentlyContinue)) { throw "Azure CLI fehlt" }
-
 # 1) Commit (wenn Änderungen vorhanden)
 git add -A
 $pending = git diff --cached --name-only
@@ -18,10 +16,6 @@ if (-not $pending) {
 }
 
 # 2) Deploy
-az account show 1>$null 2>$null
-if ($LASTEXITCODE -ne 0) { throw "Nicht bei Azure angemeldet. Bitte az login." }
-
-az storage blob sync --account-name $AccountName --container $Container --source $Source --auth-mode login --delete-destination false
-if ($LASTEXITCODE -ne 0) { throw "Azure Sync fehlgeschlagen" }
+powershell -NoProfile -ExecutionPolicy Bypass -File .\scripts\deploy-dev.ps1 -Source $Source -AccountName $AccountName -Container $Container
 
 Write-Host "Commit + Deploy erfolgreich" -ForegroundColor Green
