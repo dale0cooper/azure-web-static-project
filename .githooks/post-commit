@@ -1,0 +1,5 @@
+﻿#!/usr/bin/env pwsh
+$ErrorActionPreference = "Stop"
+if ($env:SKIP_AZURE_SYNC -eq "1") { exit 0 }
+$repo = Split-Path -Parent $MyInvocation.MyCommand.Path | Split-Path -Parent
+& pwsh -NoProfile -ExecutionPolicy Bypass -File "$repo\scripts\deploy-dev.ps1" -Source "$repo\src" -AccountName "pdvstatic" -Container '$web' | Out-Host
