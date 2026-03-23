@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>PDV Static Prototype</title>
   <style>
-    :root { --bg:#0b1220; --card:#121a2b; --text:#e7eefc; --muted:#9fb0d0; --accent:#5aa0ff; }
+    :root { --bg:#0b1220; --card:#121a2b; --text:#e7eefc; --muted:#9fb0d0; --accent:#5aa0ff; --accent2:#22d3ee; }
     * { box-sizing: border-box; }
     body { margin:0; font-family: Inter, Segoe UI, Arial, sans-serif; background:linear-gradient(180deg,#0b1220,#0f172a); color:var(--text); }
     .wrap { max-width: 980px; margin: 48px auto; padding: 0 20px; }
@@ -13,7 +13,7 @@
     p { margin:0 0 28px; color:var(--muted); }
     .grid { display:grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap:16px; }
     .card { background:var(--card); border:1px solid #1f2a44; border-radius:14px; padding:18px; display:flex; gap:12px; align-items:center; }
-    .icon { width:40px; height:40px; border-radius:10px; display:grid; place-items:center; background:#0f213f; color:#8bbcff; }
+    .icon { width:44px; height:44px; border-radius:12px; display:grid; place-items:center; background:linear-gradient(145deg,#14335d,#12304f); color:#c7e2ff; box-shadow: inset 0 0 0 1px #2a4a77; }
     .label { font-weight:600; }
     .sub { color:var(--muted); font-size:.92rem; margin-top:2px; }
   </style>
@@ -21,34 +21,33 @@
 <body>
   <main class="wrap">
     <h1>Prototype UI</h1>
-    <p>Oldschool-Logos wurden auf moderne, einheitliche Icons umgestellt.</p>
+    <p>Logos wurden auf moderne, konsistente Produkt-Icons umgestellt (v2).</p>
 
     <section class="grid">
       <article class="card">
         <div class="icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h16M4 12h16M4 17h10"/><circle cx="18" cy="17" r="2.5"/></svg>
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="4" width="17" height="15" rx="3"/><path d="M7 9h10M7 13h6"/></svg>
         </div>
-        <div><div class="label">Dashboard</div><div class="sub">Klarere Navigation</div></div>
+        <div><div class="label">Dashboard</div><div class="sub">Cleanes, modernes Panel-Icon</div></div>
       </article>
 
       <article class="card">
         <div class="icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 6h16v12H4z"/><path d="M8 10h8M8 14h5"/></svg>
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 5h14v14H5z"/><path d="M9 9h6v6H9z"/><path d="M9 3v2M15 3v2M9 19v2M15 19v2"/></svg>
         </div>
-        <div><div class="label">Content</div><div class="sub">Modernisierte Assets</div></div>
+        <div><div class="label">Content</div><div class="sub">Neues, techigeres App-Icon</div></div>
       </article>
 
       <article class="card">
         <div class="icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4z"/><path d="M9 12l2 2 4-4"/></svg>
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 4v5c0 4.8-3.1 7.8-7 9-3.9-1.2-7-4.2-7-9V7l7-4z"/><path d="M9.5 12.5 11 14l3.5-3.5"/></svg>
         </div>
-        <div><div class="label">Security</div><div class="sub">Saubere Icon-Sprache</div></div>
+        <div><div class="label">Security</div><div class="sub">Moderne Shield/Check-Symbolik</div></div>
       </article>
     </section>
   </main>
   <!-- deploy-smoke: 2026-03-24 00:03:35 -->
   <!-- chain-check: 2026-03-24 00:29:07 -->
+  <!-- icon-refresh-v2: 2026-03-24 00:36:00 -->
 </body>
 </html>
-
-
